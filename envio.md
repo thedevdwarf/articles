@@ -279,7 +279,7 @@ UniswapV2Pair.Swap.handler(async ({ event, context }) => {
     txHash: event.block.hash,
     timestamp: BigInt(event.block.timestamp),
   });
-console.log(`Swap volume at ${event.srcAddress}: ${volume}`);
+console.log(`Swap volume at ${event.srcAddress}: ${event.params.amount0Out}`);
 });
 ```
 
