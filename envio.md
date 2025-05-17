@@ -164,7 +164,8 @@ tsconfig.json
 Download the Uniswap V2 Pair ABI from the following URL and place it in the `abis/` folder:
 
 ```
-https://unpkg.com/@uniswap/v2-core@1.0.0/build/IUniswapV2Pair.json
+mkdir abis
+curl -o abis/IUniswapV2Pair.json https://unpkg.com/@uniswap/v2-core@1.0.0/build/IUniswapV2Pair.json
 ```
 
 Save the file as `UniswapV2Pair.json` inside the `abis` folder.
