@@ -146,6 +146,7 @@ UniswapV2Pair.Swap.handler(async ({ event, context }) => {
     txHash: event.block.hash,
     timestamp: BigInt(event.block.timestamp),
   });
+console.log(`Swap volume at ${event.srcAddress}: ${volume}`);
 });
 ```
 
@@ -161,8 +162,18 @@ pnpm envio dev
 ```
 ![image](https://github.com/user-attachments/assets/530be39b-ab38-41f4-8b9d-a41114d839d7)
 
-
+If you see "Registered new UniswapV2Pair" and "Swap volume at" in the logs, it means everything is working correctly.
 
 Now head to Hasura and check if the `Swap` table is being populated correctly.
 
-➡️ In the next part, we’ll explore how to query and analyze the indexed data.
+open in browser ``` yorserver_ipaddress:8080 ```
+default password ``` testing ```
+
+![image](https://github.com/user-attachments/assets/02592a0c-ac6a-419c-8ec5-2290fd0a5472)
+
+![image](https://github.com/user-attachments/assets/5a021260-7f1a-455b-9d3f-fe0af8c706b3)
+
+If the Swap table contains data, you’ve made it!
+
+
+
